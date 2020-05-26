@@ -1,0 +1,74 @@
+<div class="cotainer">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header"><b>Register</b></div>
+                <div class="card-body">
+                    <form name="my-form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                        <div class="form-group row">
+                            <label for="first_name" class="col-md-4 col-form-label text-md-right"><mark>*</mark>First
+                                Name</label>
+                            <div class="col-md-6">
+                                <input type="text" id="fisrt_name" placeholder="please enter your first name"
+                                    [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" class="form-control"
+                                    formControlName="firstName" [(ngModel)]="register.firstName" required>
+                                <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                                    <div *ngIf="f.firstName.errors.required">First Name is required</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="last_name" class="col-md-4 col-form-label text-md-right"><mark>*</mark>Last
+                                Name</label>
+                            <div class="col-md-6">
+                                <input type="text" id="last_name" placeholder="please enter your last name"
+                                    [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" class="form-control"
+                                    formControlName="lastName" [(ngModel)]="register.lastName">
+                                <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                                    <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-group row">
+                            <label for="email" class="col-md-4 col-form-label text-md-right"><mark>*</mark>E-Mail
+                            </label>
+                            <div class="col-md-6">
+                                <input type="email" id="email"
+                                    placeholder="please enter your E-Mail (abc@nagarro.com)"
+                                    [ngClass]="{ 'is-invalid': submitted && f.email.errors }" class="form-control"
+                                    formControlName="email" [(ngModel)]="register.email">
+                                <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                                    <div *ngIf="f.email.errors.required">E-mail is required</div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                  
+
+
+                        <div class="form-group row">
+                            <label for="password" class="col-md-4 col-form-label text-md-right"><abbr
+                                    title="National Id Card"><mark>*</mark>Password</abbr> </label>
+                            <div class="col-md-6">
+                                <input type="password" id="password" placeholder="please enter your zip number"
+                                    [ngClass]="{ 'is-invalid': submitted && f.password.errors }" class="form-control"
+                                    formControlName="password" [(ngModel)]="register.password">
+                                <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                                    <div *ngIf="f.password.errors.required">password is required</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 offset-md-5">
+                            <input type="submit" class="fadeIn fourth" value="Submit">
+                            <!-- <input type="submit" class="fadeIn fourth" routerLink="/review" value="Submit"> -->
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>

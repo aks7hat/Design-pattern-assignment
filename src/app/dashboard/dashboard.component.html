@@ -1,0 +1,91 @@
+<h2 style="color: blueviolet;" id="heading"><u>Subscribe the type of notifications that you want to receive</u></h2>
+      <br>
+      <br>
+      <div class="cotainer">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header"><b>Subscribe</b></div>
+                    <div class="card-body">
+                        <form name="my-form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                           <div class="form-group row">
+                                <label for="celebration"
+                                    class="col-md-4 col-form-label text-md-right">celebration
+                                </label>
+                                <div class="col-md-6">
+                                    <input type="text" id="celebration" formControlName="celebration"
+                                        [ngClass]="{ 'is-invalid': submitted && check.celebration.errors }" class="form-control"
+                                        name="celebration" [(ngModel)]="subscribe.celebration">
+                                    <!-- <div *ngIf="submitted && check.celebration.errors" class="invalid-feedback">
+                                        <div *ngIf="check.celebration.errors">celebration is required</div>
+                                    </div> -->
+                                </div>
+                            </div>
+
+
+                            <div class="form-group row">
+                              <label for="holiday"
+                                  class="col-md-4 col-form-label text-md-right">holiday
+                              </label>
+                              <div class="col-md-6">
+                                  <input type="text" id="holiday" formControlName="holiday"
+                                      [ngClass]="{ 'is-invalid': submitted && check.holiday.errors }" class="form-control"
+                                      name="holiday" [(ngModel)]="subscribe.holiday">
+                                  <!-- <div *ngIf="submitted && check.holiday.errors" class="invalid-feedback">
+                                      <div *ngIf="check.holiday.errors">holiday is required</div>
+                                  </div> -->
+                              </div>
+                          </div>
+
+                          <div class="form-group row">
+                            <label for="news"
+                                class="col-md-4 col-form-label text-md-right">news
+                            </label>
+                            <div class="col-md-6">
+                                <input type="text" id="news" formControlName="news"
+                                    [ngClass]="{ 'is-invalid': submitted && check.news.errors }" class="form-control"
+                                    name="news" [(ngModel)]="subscribe.news">
+                                <!-- <div *ngIf="submitted && check.news.errors" class="invalid-feedback">
+                                    <div *ngIf="check.news.errors">news is required</div>
+                                </div> -->
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                          <label for="newPolicy"
+                              class="col-md-4 col-form-label text-md-right">newPolicy
+                          </label>
+                          <div class="col-md-6">
+                              <input type="text" id="newPolicy" formControlName="newPolicy"
+                                  [ngClass]="{ 'is-invalid': submitted && check.newPolicy.errors }" class="form-control"
+                                  name="newPolicy" [(ngModel)]="subscribe.newPolicy">
+                              <!-- <div *ngIf="submitted && check.newPolicy.errors" class="invalid-feedback">
+                                  <div *ngIf="check.newPolicy.errors">newPolicy is required</div>
+                              </div> -->
+                          </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="urgentHelp"
+                            class="col-md-4 col-form-label text-md-right">urgentHelp
+                        </label>
+                        <div class="col-md-6">
+                            <input type="text" id="urgentHelp" formControlName="urgentHelp"
+                                [ngClass]="{ 'is-invalid': submitted && check.urgentHelp.errors }" class="form-control"
+                                name="urgentHelp" [(ngModel)]="subscribe.urgentHelp">
+                            <!-- <div *ngIf="submitted && check.urgentHelp.errors" class="invalid-feedback">
+                                <div *ngIf="check.urgentHelp.errors">urgentHelp is required</div>
+                            </div> -->
+                        </div>
+                    </div>
+
+                    
+    
+                            <div class="col-md-6 offset-md-5">
+                                <input type="submit" class="btn btn-primary fadeIn fourth" value="Submit">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>

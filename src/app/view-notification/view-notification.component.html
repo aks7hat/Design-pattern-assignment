@@ -1,0 +1,23 @@
+<h1 style="color: brown; text-align: center;">These are the Notification that you have</h1>
+
+
+
+<div class="container">
+    <table class="table table-hover table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">Event Type</th>  
+          <th scope="col">Notification</th>
+          
+         
+          <th scope="col"><a class="btn btn-sm btn-danger"routerLink = "/">Logout</a></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of noti">
+          <td>{{item.eventType}}</td>
+          <td>{{item.notification}}</td>
+       </tr>
+      </tbody>
+    </table>
+ </div>

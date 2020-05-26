@@ -1,0 +1,22 @@
+<div class="wrapper">
+  <div id="formContent">
+
+    <br>
+    <h3 style="color: coral;">Login</h3>
+    <br>
+   
+    <form #form ="ngForm" >
+      <input type="email" id="login" class="fadeIn first" name="email" placeholder="email"    #fieldOne="ngModel"
+       ngModel [class.field-error]="form.submitted && fieldOne.invalid">  
+      <input type="password" id="password" class="fadeIn first" name="password" placeholder="password"    #fieldTwo="ngModel"
+       ngModel [class.field-error]="form.submitted && fieldTwo.invalid" >
+      <input type="button" class="fadeIn fourth" value="Log In " (click)="login(form)">
+    </form>
+    <div id="formFooter">
+      
+      &nbsp;&nbsp;
+      <a class="underlineHover" routerLink="/register">SignUp</a>  
+    </div>
+
+  </div>
+</div>

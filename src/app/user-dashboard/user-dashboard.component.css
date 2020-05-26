@@ -1,0 +1,38 @@
+.navbar-laravel
+{
+    box-shadow: 0 2px 4px rgba(0,0,0,.04);
+}
+
+.navbar-brand , .nav-link, .my-form, .login-form
+{
+    font-family: Raleway, sans-serif;
+}
+
+.travel-portal{
+    font-size: 25px;
+    font-weight: bold;
+    color: #f6ac3d;
+    /* color:black */
+}
+nav
+{
+    background-color: rgb(156, 109, 168);
+}
+
+#noti
+{
+    margin-top: 200px;
+    margin-left: 150px;
+    height: 50px;
+    
+}
+#subs
+{
+    margin-top: 200px;
+    margin-left: 150px;
+    height: 50px;
+}
+
+a{
+    margin-right:70px;
+}
